@@ -33,39 +33,45 @@ const CheckoutForm = (props) => {
         <h2>Checkout Form</h2>
         <label htmlFor="firstName">
           First Name:
+          
+        
           <input
+            type="text"
             name="firstName"
             value={values.firstName}
             onChange={handleChanges}
           />
         </label>
-        <label htmlFor="lastName">
-          Last Name:
+        <label htmlFor="lastName"> Last Name:
+         
           <input
+            type="text"
             name="lastName"
             value={values.lastName}
             onChange={handleChanges}
           />
-        </label>
-        <label htmlFor="Address">
+     </label>
+        <label htmlFor="Address"> 
           Address:
           <input
+            type="text"
             name="address"
             value={values.address}
             onChange={handleChanges}
           />
-        </label>
-        <label htmlFor="City">
+  </label>
+       
+        <label htmlFor="City"> 
           City:
-          <input name="city" value={values.city} onChange={handleChanges} />
-        </label>
+          <input  type="text" name="city" value={values.city} onChange={handleChanges} />
+          </label>
         <label htmlFor="State">
           State:
-          <input name="state" value={values.state} onChange={handleChanges} />
+          <input  type="text" name="state" value={values.state} onChange={handleChanges} />
         </label>
         <label htmlFor="Zip">
           Zip:
-          <input name="zip" value={values.zip} onChange={handleChanges} />
+          <input  type="text" name="zip" value={values.zip} onChange={handleChanges} />
         </label>
         <button>Checkout</button>
       </form>

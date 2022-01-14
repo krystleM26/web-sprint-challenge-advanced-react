@@ -1,5 +1,5 @@
 import React from 'react'
-import MutationObserver from 'mutationobserver-shim'
+
 import { render, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import CheckoutForm from './CheckoutForm'
@@ -13,31 +13,35 @@ test('renders without errors', () => {
 test('shows success message on submit with form details', () => {
   render(<CheckoutForm />)
   //    firstName Test
-  const firstName = screen.queryByText(/firstName/i)
+  const firstName = screen.getByText(/firstName/i)
 
-  userEvent.type(firstName, ' ')
+  userEvent.type(firstName, 'ufuk')
 
   // lastName Test
-  const lastName = screen.queryByText(/lastName/i)
-  userEvent.type(lastName, ' ')
+  const lastName = screen.getByLabelText(/lastName/i)
+  userEvent.type(lastName, ' gfhfghg')
 
   // Address Test
   const address = screen.getByLabelText(/address/i)
-  userEvent.type(address, '')
+  userEvent.type(address, 'jhhhghj')
   // City Test
 
   const city = screen.getByLabelText(/city/i)
-  userEvent.type(city, '')
+  userEvent.type(city, 'hjhgjhgj')
 
   const state = screen.getByLabelText(/state/i)
-  userEvent.type(state, " ")
-  
-  const zipCode = screen.queryByText(/zipCode/i)
-  userEvent.type(zipCode, " ");
+  userEvent.type(state, 'yuytty ')
+
+  const zipCode = screen.getByLabelText(/zipCode/i)
+  userEvent.type(zipCode, '97644 ')
 
   const button = screen.getByRole('button')
   userEvent.click(button)
-  
+
+  const confirmation = screen.queryByText("ufuk")
+  expect(confirmation).toBeInTheDocument();
+//   expect(confirmation).toBeTruthy();
+//   expect(confirmation).not.toBeNull();
 
 
 })
