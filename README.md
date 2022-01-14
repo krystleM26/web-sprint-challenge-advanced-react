@@ -80,12 +80,12 @@ In this project, you will build the retrieve data from a public api, add in a fa
 
 * [x ] Build a custom hook called `useForm`, and use it in your CheckoutForm component to control the form's stateful logic. **You do not need to use useLocalStorage to complete this task! localStorage is not necessary for this project. Simply reproduce all functionality for the in module 1 useForm custom hook to complete.**
 
-* [ x] Try and build it out first before you peek at the guided project. And *do not* copy/paste directly from the guided project!_ _ I didn't realize how easy this was to make 
+* [ x] Try and build it out first before you peek at the guided project. And *do not* copy/paste directly from the guided project!_ - I didn't realize how easy this was to make 
 
 ### Testing the Checkout Form
 * [ ] Run the test runner and ensure that `src/components/CheckoutForm.test.js` is correctly called.
-* [ ] Fill out code necessary to test that that Checkout form renders without errors.
-* [ ] Fill out code necessary to test that when all form inputs are filled with valid data, a success message appears.
+* [x ] Fill out code necessary to test that that Checkout form renders without errors.
+* [ x] Fill out code necessary to test that when all form inputs are filled with valid data, a success message appears.
 * [ ] Make sure the tests are passing, and make sure you can cause the tests to fail purposefully, so that you know the tests are truly working.
 
 ## Important Notes:
@@ -117,9 +117,17 @@ test("displays plants in cart", () => {
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. Add your answers below.
 
 1. What are the main differences between a class-based and a functional component?
+A class based component is a stateful component that controls the state changes as well as the implementation of the component's logic. While a function component is stateless since they only accepted and returned data rendered to the DOM. 
 
 2. When does a componentWillMount function be called? What about a componentDidUpdate?
+ComponentWillMount with be called immediately after the component renders. While componentDidUpdate is called automatically at specific points of the component's lifecycle.
 
 3. Define stateful logic.
+Stateful logic is reusable code thats used by the state in multiple components to help keep code DRY. 
 
 4. What are the three step of creating a successful test? What is done in each phase? 
+Successful testing consists of the following three steps and their implementations:
+Arrange- renders the react element to the DOM it- results in instant success once applied.
+Act- "queries/questions" the DOM for text we expect to see or render.
+Assert- assures the query is rendered
+
