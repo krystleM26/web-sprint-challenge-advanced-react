@@ -19,9 +19,9 @@ export default class PlantList extends Component {
           plants: resp.data,
         })
       })
-      .catch((err) => {
-        console.log(err.data)
-      })
+      // .catch((err) => {
+      //   console.log(err.data)
+      // })
   }
 
   /*********  DON'T CHANGE ANYTHING IN THE RENDER FUNCTION *********/
